@@ -15,7 +15,7 @@ fourcc = cv2.VideoWriter_fourcc(*"MJPG")
 # VideoWriter 오브젝트를 생성
 # cv2.VideoWriter("저장파일이름.확장자", 코덱, 프레임수(fps), 프레임사이즈, isColor)
 # isColor이 참이면 색있는 영상. 아니면 흑백
-out = cv2.VideoWriter("output.avi", fourcc, 20.0, (640, 480))
+out = cv2.VideoWriter("0_basic/1_video/output.avi", fourcc, 20.0, (640, 480))
 
 # 카메라 입력 받기
 cap = cv2.VideoCapture(0)

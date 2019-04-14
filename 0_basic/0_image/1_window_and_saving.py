@@ -6,7 +6,7 @@ import cv2
 # cv2.imwrite() -> 사진을 저장함
 
 # 흑백 사진 받기
-img = cv2.imread("barracks.jpg", 0)
+img = cv2.imread("0_basic/0_image/barracks.jpg", 0)
 
 # 사진 출력하기 전에 창을 미리 만들어서 크기를 지정해줄 수 있음
 # cv2.namedWindow("창 이름", 사이즈)
@@ -25,5 +25,5 @@ k = cv2.waitKey(0) & 0xFF
 if (k == 27):
     cv2.destroyAllWindows()
 elif (k == ord('s')):
-    cv2.imwrite("barracks_gray.png", img)
+    cv2.imwrite("0_basic/0_image/barracks_gray.png", img)
     cv2.destroyAllWindows()

@@ -12,7 +12,7 @@ import cv2                              # opencv.
 # cv2.IMREAD_GRAYSCALE -> 흑백 사진 (0)
 # cv2.IMREAD_UNCHANGED -> 알파 채널 추가 (-1)
 # 이렇게 세 가지 대신 그냥 순서대로 정수 1, 0, -1으로 입력해줘도 가능
-img = cv2.imread("barracks.jpg", 0)
+img = cv2.imread("0_basic/0_image/barracks.jpg", 0)
 # img 오브젝트의 타입은 numpy.ndarray, 즉 행렬임.
 # barracks.jpg라는 사진은 width가 3243 px, height이 2208 px
 # img는 흑백이기 때문에 3243x2208 행렬에 흑백 정도치를 갖고 있을 것.
