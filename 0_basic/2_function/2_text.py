@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 텍스트를 출력함
+
 # 배울 것
 # cv.putText() -> 글을 그림
 

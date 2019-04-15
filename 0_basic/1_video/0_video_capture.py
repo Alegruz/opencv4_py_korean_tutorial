@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 카메라 입력을 받아 출력함
+
 # 배울 함수들
 # cv.VideoCapture() -> 카메라로부터 영상을 입력받음
 

@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 마우스 입력을 받음
+
 # 배울 함수
 # cv.setMouseCallback() -> 마우스 입력 받기
 

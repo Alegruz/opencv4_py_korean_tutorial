@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 사진을 여러 채널(색)로 나눔
+
 # 배울 것
 # cv.split() -> 사진 여러 채널로 나누기
 # cv.merge() -> 여러 채널 한 사진으로 합치기

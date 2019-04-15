@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 영상을 저장함
+
 # 배울 것들
 # cv.VideoWriter 오브젝트
 # FourCC 코드 -> 4바이트(4글자) 영상 코덱 식별자 (fourcc.org에서 리스트 확인할 수 있음)

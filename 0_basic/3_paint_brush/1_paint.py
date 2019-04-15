@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 페인트 툴을 만듬
+
 # 배울 것들
 # EVENT_LBUTTONDOWN -> 마우스 좌클릭 됐는지
 # EVENT_MOUSEMOVE   -> 마우스 움직였는지

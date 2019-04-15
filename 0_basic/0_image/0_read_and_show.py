@@ -1,6 +1,8 @@
 import numpy as np                      # numpy. 사진을 처리하는데 행렬(배열)이 필요하기 때문에 사용하는 모듈.
 import cv2 as cv                        # opencv.
 
+# 사진 파일을 읽고 출력하는 방법을 배움
+
 # 배울 함수들
 # cv.imread() -> 사진을 입력받음
 # cv.imshow() -> 사진을 출력함

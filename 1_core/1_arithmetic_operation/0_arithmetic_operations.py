@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 이미지 두 개를 더하는 방법
+
 # 배울 것
 # cv.add() / + operator -> shape과 dtype이 같은 두 이미지를 더함
 

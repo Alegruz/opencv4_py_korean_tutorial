@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 간단한 도형을 출력함
+
 # 배울 것
 # numpy.zeros() -> 원소가 전부 0인 행렬 생성
 # cv.line() -> 선 그림

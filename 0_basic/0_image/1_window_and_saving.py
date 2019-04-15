@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 이미지를 출력할 창을 생성하고 이미지를 저장하는 법을 배움
+
 # 배울 함수들
 # cv.namedWindow() -> 창을 먼저 만들어줌
 # cv.imwrite() -> 사진을 저장함

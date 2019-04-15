@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 다각형 출력
+
 # 배울 것
 # cv.polylines() -> 다각형 그림
 # numpy.array() -> 특정 행렬 생성

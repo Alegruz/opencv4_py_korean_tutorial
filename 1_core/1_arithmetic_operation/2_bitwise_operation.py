@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 이미지 합성하는 방법
+
 # 배울 것
 # cv.threshold() -> 마스크 생성
 # cv.bitwise_not() -> 반대 비트로 전환

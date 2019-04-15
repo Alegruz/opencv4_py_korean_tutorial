@@ -4,6 +4,8 @@ from matplotlib import pyplot as plt
 
 BLUE = [255, 0, 0]
 
+# 이미지의 테두리에 대해 배움
+
 # 배울 것
 # cv.copyMakeBorder() -> 테두리 만들기
 

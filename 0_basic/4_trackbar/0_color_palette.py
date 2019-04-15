@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 
+# 트랙바를 배움
+
 # 배울 함수
 # cv.createTrackbar() -> 트랙바 생성
 # cv.getTrackbarPos() -> 트랙바의 현재 값 받기

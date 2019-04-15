@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 
+# 영상 파일을 입력받아 출력함
+
 # 배울 함수들
 # cv.VideoCapture.isOpened() -> cap이 제대로 초기화 되었는지 확인한다.
 

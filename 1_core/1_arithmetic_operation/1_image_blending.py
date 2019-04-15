@@ -3,6 +3,8 @@ import numpy as np
 import time         # 딜레이 설정
 import math         # 이미지 페이드 인아웃 속도 조절
 
+# 이미지 두 개를 섞어서 전환하는 방법
+
 # 배울 것
 # cv.addWeighted() -> f(x) = (1 - a)g(x) + ah(x) 이 식을 통해 페이드 인 아웃 설정. a의 값이 지속적으로 증가한다고 가정
 
