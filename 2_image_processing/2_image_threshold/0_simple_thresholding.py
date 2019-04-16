@@ -15,8 +15,8 @@ img = cv.imread("1_core/1_arithmetic_operation/macbook.png", 0)
 # maxval. 픽셀이 임계점보다 클 때 픽셀에 할당할 값
 # type. 임계처리하는 방식. 여기서 단순 임계처리는 cv.THRESH_BINARY이다.
 # 단순 임계처리의 타입들
-# cv.THRESH_BINARY
-# cv.THRESH_BINARY_INV
+# cv.THRESH_BINARY      -> dst(x, y) = maxval if (src(x, y) > T(x, y)) else 0
+# cv.THRESH_BINARY_INV  -> dst(x, y) = 0 if (src(x, y) > T(x, y)) else maxval
 # cv.THRESH_TRUNC
 # cv.THRESH_TOZERO
 # cv.THRESH_TOZERO_INV
