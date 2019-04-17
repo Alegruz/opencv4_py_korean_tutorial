@@ -20,11 +20,16 @@ img = cv.imread('2_image_processing/2_image_threshold/bimodal_image.png',0)
 ret1,th1 = cv.threshold(img, 127, 255, cv.THRESH_BINARY)
 
 # Otsu 임계처리
-ret2,th2 = cv.threshold(img, 0, 255, cv.THRESH_BINARY+cv.THRESH_OTSU)
+ret2,th2 = cv.threshold(img, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
 # Gaussian 필터링을 해준 다음 Otsu 임계처리
+# cv.GaussianBlur(src, ksize, sigmaX[, dst[, sigmaY[, borderType]]]) -> dst
+# src. 입력 이미지.
+# ksize. gaussian kernel 사이즈. k.width과 k.height(좌우 크기)은 다를 수 있으나 반드시 둘 다 양수인 홀수여야한다. ksize가 0이면 sigma의 값을 사용한다
+# sigmaX. sigmaY. gaussian kernel의 x / y 방향 표준편차. 만약 sigmaY가 0이면 sigmaX와 같은 값을 갖지만, 둘 다 0이면 ksize의 값을 사용한다.
+# dst. src와 같은 크기, 타입을 갖는 출력 이미지.
 blur = cv.GaussianBlur(img,(5, 5), 0)
-ret3,th3 = cv.threshold(blur, 0, 255, cv.THRESH_BINARY+cv.THRESH_OTSU)
+ret3,th3 = cv.threshold(blur, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
 # 생성한 이미지들을 출력해줌
 images = [img, 0, th1,
