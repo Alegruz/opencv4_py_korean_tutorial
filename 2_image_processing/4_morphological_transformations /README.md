@@ -69,4 +69,27 @@ closing한 입력 이미지와 입력 이미지를 뺀 이미지다.<br>
 우리는 numpy를 이용해 예제를 통해 stucturing element를 직접 구현해보았다.<br>
 직사각형 모습이지만, 타원/원형 커널이 필요할 때도 있다.<br>
 이런 경우에 OpenCV의 함수 중 cv.getStructuringElement()를 사용해주면 된다.<br>
-커널의 shape과 size를 패스해주면 원하는 커널을 얻을 수 있다.
+커널의 shape과 size를 패스해주면 원하는 커널을 얻을 수 있다.<br><br>
+<pre><code>
+# Rectangular Kernel
+>>> cv.getStructuringElement(cv.MORPH_RECT,(5,5))
+array([[1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1]], dtype=uint8)
+# Elliptical Kernel
+>>> cv.getStructuringElement(cv.MORPH_ELLIPSE,(5,5))
+array([[0, 0, 1, 0, 0],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [1, 1, 1, 1, 1],
+       [0, 0, 1, 0, 0]], dtype=uint8)
+# Cross-shaped Kernel
+>>> cv.getStructuringElement(cv.MORPH_CROSS,(5,5))
+array([[0, 0, 1, 0, 0],
+       [0, 0, 1, 0, 0],
+       [1, 1, 1, 1, 1],
+       [0, 0, 1, 0, 0],
+       [0, 0, 1, 0, 0]], dtype=uint8)
+</code></pre>
