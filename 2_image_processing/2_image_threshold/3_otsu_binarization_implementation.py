@@ -14,7 +14,6 @@ blur = cv.GaussianBlur(img, (5, 5), 0)
 # ranges. 각 차원의 히스토그램의 bin boundaries의 차원행렬들의 행렬.
 # hist. 출력 히스토그램.
 hist = cv.calcHist([blur], [0], None, [256], [0, 256])
-print(type(hist))
 # ndarray.ravel()
 # 다차원 행렬을 1-D 행렬로 바꾼다.
 # ndarray.max()
@@ -35,8 +34,14 @@ thresh = -1
 for i in range(1, 256):
     # numpy.hsplit(ary, indices_or_sections)
     # ary. 나뉘어질 행렬
-    # indices_or_sections.
-    p1, p2 = np.hsplit(hist_norm,[i]) # 확률
+    # indices_or_sections. 정수 혹은 1-D 행렬. 만약 정수 N아면 ary는 axis를 기준으로 N 개의 같은 크기의 행렬로 나뉘어짐
+    #                                       1-D 행렬이면 그 행렬의 원소들은 행렬이 axis에 따라서 어디서 split 되는지를 나타냄.
+    #                                       [2, 3]이고 axis=0이면 ary[:2], ary[2:3], ary[3:] 로 나뉨
+    # hsplit은 여기서 axis = 1이다
+    p1, p2 = np.hsplit(hist_norm, [i]) # 확률
+    # hist_norm은 1x256 행렬이므로 이 행렬을 [i]로 나눌 때,
+    # hist_norm[:i] 와 hist_norm[:i] 으로 나뉨
+
     q1, q2 = Q[i], Q[255] - Q[i] # 클래스의 누적합
     b1, b2 = np.hsplit(bins, [i]) # 무게
     
@@ -52,4 +57,4 @@ for i in range(1, 256):
 
 # OpenCV 함수로 Otsu 임계점 찾기
 ret, otsu = cv.threshold(blur, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
-print( "{} {}".format(thresh, ret) )
+print( "{} {}".format(thresh, ret))
